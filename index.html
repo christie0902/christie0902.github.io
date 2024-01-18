@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Checkout Page</title>
+    <link rel="stylesheet" href="/css/style.scss" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,300;0,400;0,700;1,100&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <div class="wholepage">
+      <div class="detail">
+        <div class="detail__price">
+          <h1>TOTAL</h1>
+          <h2>$698</h2>
+        </div>
+        <h1>DETAIL</h1>
+        <div class="detail__content">
+          <div class="detail__content__product">
+            <p>Product One</p>
+            <h3>$599</h3>
+          </div>
+          <div class="detail__content__product">
+            <p>Product Two</p>
+            <h3>$99</h3>
+          </div>
+        </div>
+
+        <button>PAY NOW</button>
+      </div>
+    </div>
+    <form class="card">
+      <div class="card__content">
+        <div class="card__name">
+          <label for="name">NAME</label>
+          <input type="text" id="name" name="name" required />
+        </div>
+
+        <div class="card__number">
+          <label for="card-number">CARD NUMBER</label>
+          <input type="number" id="card-number" name="card-number" required />
+        </div>
+
+        <div class="card__last_row">
+          <div class="card__date">
+            <label for="expiration-date">EXPERATION DATE</label>
+            <div class="exp-wrapper">
+              <input
+                autocomplete="off"
+                id="month"
+                maxlength="2"
+                pattern="[0-9]*"
+                inputmode="numerical"
+                placeholder="MM"
+                type="number"
+                data-pattern-validate
+              />
+              <input
+                autocomplete="off"
+                class="exp"
+                id="year"
+                maxlength="2"
+                pattern="[0-9]*"
+                inputmode="numerical"
+                placeholder="YY"
+                type="number"
+                data-pattern-validate
+              />
+            </div>
+          </div>
+
+          <div class="cvc">
+            <label for="cvc">CVC:</label>
+            <input
+              type="number"
+              id="cvc"
+              name="cvc"
+              maxlength="3"
+              pattern="[0-9]*"
+              required
+            />
+          </div>
+        </div>
+      </div>
+    </form>
+  </body>
+</html>
